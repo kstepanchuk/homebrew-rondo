@@ -1,8 +1,8 @@
 cask "rondo" do
-  version "0.1.3"
-  sha256 "03b8bbd7290853a73224b44d2a1363788fbec3db9e80ac43f71c5eae8a995a6a"
+  version "0.1.4"
+  sha256 "3012ba9bc94c279f13b4a97cb3963140cbc7d7752f0fd846b2317d743b551f45"
 
-  url "https://github.com/kstepanchuk/rondo/releases/download/v#{version}/Rondo-#{version}.zip"
+  url "https://github.com/kstepanchuk/rondo/releases/download/v#{version}/Rondo-#{version}.dmg"
   name "Rondo"
   desc "Radial-menu file converter: drag a file, hold a modifier, drop on a format"
   homepage "https://github.com/kstepanchuk/rondo"
