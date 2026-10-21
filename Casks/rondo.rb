@@ -1,6 +1,6 @@
 cask "rondo" do
-  version "0.1.6"
-  sha256 "c2166a0a771748f5dfca142459f807f2c4e9592c5d462a11f1ee91960e308551"
+  version "0.2.0"
+  sha256 "b8404f59a0d882d908998dbac8cd82abfa538dbc8db9b88d037dc893d66bcafa"
 
   url "https://github.com/kstepanchuk/rondo/releases/download/v#{version}/Rondo-#{version}.dmg"
   name "Rondo"
@@ -16,6 +16,7 @@ cask "rondo" do
   depends_on macos: :ventura
 
   app "Rondo.app"
+  binary "#{appdir}/Rondo.app/Contents/MacOS/Rondo", target: "rondo"
 
   # The app is ad-hoc signed (not notarized), so Gatekeeper would block the first launch.
   postflight do
