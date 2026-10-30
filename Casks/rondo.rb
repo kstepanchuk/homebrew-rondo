@@ -19,8 +19,8 @@ cask "rondo" do
   binary "#{appdir}/Rondo.app/Contents/MacOS/Rondo", target: "rondo"
 
   # The app is ad-hoc signed (not notarized), so Gatekeeper would block the first launch.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Rondo.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "/Applications/Rondo.app"], must_succeed: false
   end
 
   uninstall quit: "io.github.kstepanchuk.rondo"
